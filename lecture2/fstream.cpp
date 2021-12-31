@@ -5,19 +5,19 @@ using namespace std;
 
 int main()
 {
-	const string filename {"test.txt"};
+	const string filename{"test.txt"};
 
-	ofstream ofs {filename};
+	ofstream ofs{filename};
 	if (!ofs)
-		cerr << "oh no";
-	ofs << "test";
+		cerr << "oh no" << endl;
+	ofs << "test" << endl;
 
-	ifstream ifs {filename};
+	ifstream ifs{filename};
 	if (!ifs)
-		cerr << "oh no again";
+		cerr << "oh no again" << endl;
 
 	if (string s; ifs >> s)
-		cout << s;
+		cout << s << endl;
 	else
-		cerr << "nothing to read?";
+		cerr << "nothing to read?" << endl;
 }
